@@ -25,6 +25,13 @@ public class UserController {
 
     @PostMapping("/login")
     public String loginUserr(@RequestBody User user){
+
         return userService.validateUser(user);
     }
+    @GetMapping("/Hello")
+    public String hello()
+    {
+        return "Hello";
+    }
+
 }
